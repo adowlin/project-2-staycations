@@ -23,11 +23,25 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
     - Find restaurants & attractions near my current location, if I am already on holiday.
 
 ### Design
-    
+
+- Colour Scheme:
+
+    <img src="/readme-assets/images/staycations-palette.png" alt="color palette" style="width:400px;height:300px;">
+
+    - Colour palette was generated using [coolors.co](https://coolors.co/). I chose this colour scheme as it offers sufficient contrasts, and aligns with the Irish theme of the site by using colours similar to the Irish Tricolour.
+
+- Typography:
+    - Using [Google Fonts](https://fonts.google.com/), I chose [Merriweather](https://fonts.google.com/specimen/Merriweather) for the site's logo and headings, paired with [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans) for the site's main text.
 
 ### Wireframes
 
+- Wireframes were created using [Balsamiq](https://balsamiq.com/):
 
+    - [All wireframes PDF](/readme-assets/staycations-wireframes.pdf)
+
+- Flowchart created using [draw.io](https://app.diagrams.net/):
+
+    - [Flowchart PDF](/readme-assets/staycations-flowchart.pdf)
 
 ## Features
 
