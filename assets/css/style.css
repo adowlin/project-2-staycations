@@ -189,10 +189,9 @@ input:checked + .slider:before {
 
 /* -------------------------------------------------- Searchbar & Map */
 
-
-
 .map-wrapper {
     margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .map-wrapper > .input-group {
@@ -220,4 +219,21 @@ input:checked + .slider:before {
 
 div#map {
     min-height: 30rem;
+}
+
+/* -------------------------------------------------- Footer */
+
+footer {
+    height: 15vh;
+    background-color: rgb(21, 122, 110);
+}
+
+footer > .contact-links,
+footer > .dark-mode-toggle {
+    margin-top: 1rem;
+}
+
+footer > .author-info {
+    margin-top: 1rem;
+    height: 5vh;
 }
