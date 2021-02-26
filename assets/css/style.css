@@ -156,3 +156,36 @@ input:checked + .slider:before {
   right:0;
   background:rgba(0,0,0,0.5);
 }
+
+/* .lead-text {
+    position: relative;
+    z-index: 1;
+} */
+
+.header-text {
+    position: absolute;
+    top: 20vh;
+    left: 1.8vh;
+    right: auto;
+    width: 96.6vw;
+    color: rgb(242, 253, 255);
+    z-index: 1;
+}
+
+.header-text h2 {
+    font-size: 1.75rem;
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+    margin-bottom: 10vh;
+    text-align: center;
+}
+
+.header-text h2 span {
+	padding: 1rem;
+}
+
+.header-text h3 {
+    font-size: 1.25rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+}
