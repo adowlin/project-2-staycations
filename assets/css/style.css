@@ -15,11 +15,10 @@ body {
 /* -------------------------------------------------- Navbar */
 
 #navigation {
-    height: 15vh;
     background-color: rgb(21, 122, 110);
 }
 
-#logo {
+#navigation #logo {
     font-family: 'Merriweather', serif;
     font-weight: 900;
     font-size: 5vh;
@@ -31,6 +30,16 @@ body {
 .navbar-toggler {
     border: 0;
     color: rgb(23, 33, 33);
+    text-align: right;
+}
+
+#navigation .nav-item,
+#navigation a {
+    color: rgb(242, 253, 255);
+    font-weight: 300;
+    margin: 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 /*  Dark Mode Switch
