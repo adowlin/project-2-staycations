@@ -241,6 +241,10 @@ footer {
     font-size: 1rem;
 }
 
+.footer-links:hover {
+    color: rgb(139, 230, 181);
+}
+
 .contact-links > a {
     padding: 0.5rem;
     margin-top: 0.5rem;
@@ -256,6 +260,10 @@ footer {
 
 .social-links a {
     color: rgb(242, 253, 255);
+}
+
+.social-links a:hover {
+    color: rgb(139, 230, 181);
 }
 
 .footer > .dark-mode-toggle {
