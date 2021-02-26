@@ -187,7 +187,36 @@ input:checked + .slider:before {
     font-weight: 400;
 }
 
-/* -------------------------------------------------- Map */
+/* -------------------------------------------------- Searchbar & Map */
+
+
+
+.map-wrapper {
+    margin-top: 1rem;
+}
+
+.map-wrapper > .input-group {
+    margin-bottom: 1rem;
+}
+
+.map-wrapper > .input-group > #map-search {
+    background-color: rgb(242, 253, 255);
+    border: 0.1rem solid rgb(23, 33, 33);
+    border-radius: 2.5rem;
+    color: rgb(23, 33, 33);
+    padding-right: 10rem;
+}
+
+.map-wrapper > .input-group > .input-group-append > #search-button {
+    background-color: rgb(35, 206, 107);
+    border: 0.1rem solid rgb(35, 206, 107);
+    border-radius: 2.5rem;
+    color: rgb(23, 33, 33);
+}
+
+.map-wrapper > .input-group > .input-group-append > #search-button:hover {
+    background-color: rgb(139, 230, 181);
+}
 
 div#map {
     min-height: 30rem;
