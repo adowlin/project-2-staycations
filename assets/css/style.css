@@ -157,10 +157,7 @@ input:checked + .slider:before {
   background:rgba(0,0,0,0.5);
 }
 
-/* .lead-text {
-    position: relative;
-    z-index: 1;
-} */
+/* Styling for carousel text adapted from this example: https://bootsnipp.com/snippets/7B4x */
 
 .header-text {
     position: absolute;
