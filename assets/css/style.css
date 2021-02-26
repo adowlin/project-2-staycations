@@ -226,14 +226,26 @@ div#map {
 footer {
     height: 15vh;
     background-color: rgb(21, 122, 110);
+    margin-bottom: 0;
 }
 
-footer > .contact-links,
-footer > .dark-mode-toggle {
-    margin-top: 1rem;
+.footer > .contact-links,
+.footer > .dark-mode-toggle {
+    margin-top: 0.5rem;
+    color: rgb(242, 253, 255);
 }
 
-footer > .author-info {
-    margin-top: 1rem;
+.footer-links {
+    color: rgb(242, 253, 255);
+    text-decoration: none;
+}
+
+.social-links a {
+    color: rgb(242, 253, 255);
+}
+
+.footer > .author-info {
+    margin-top: 0.5rem;
     height: 5vh;
+    color: rgb(242, 253, 255);
 }
