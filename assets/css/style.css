@@ -186,3 +186,9 @@ input:checked + .slider:before {
     font-family: "Merriweather Sans", sans-serif;
     font-weight: 400;
 }
+
+/* -------------------------------------------------- Map */
+
+div#map {
+    min-height: 30rem;
+}
