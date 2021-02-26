@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Merriweather Sans', sans-serif;
     background-color: rgb(242, 253, 255);
@@ -11,6 +15,8 @@ body {
 .body-dark-mode {
     background-color: rgb(23, 33, 33);
 }
+
+/* -------------------------------------------------- Containers */
 
 /* -------------------------------------------------- Navbar */
 
@@ -125,4 +131,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* -------------------------------------------------- Main Carousel */
+
+.carousel-item {
+    height: 75vh;
+}
+
+.carousel-inner > .carousel-item > img {
+    height: 75vh;
+    object-fit: cover;
 }
