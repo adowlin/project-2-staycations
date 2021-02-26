@@ -231,21 +231,45 @@ footer {
 
 .footer > .contact-links,
 .footer > .dark-mode-toggle {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     color: rgb(242, 253, 255);
 }
 
 .footer-links {
     color: rgb(242, 253, 255);
     text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-links > a {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: auto;
+}
+
+.contact-links > ul > li {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: auto;
 }
 
 .social-links a {
     color: rgb(242, 253, 255);
 }
 
+.footer > .dark-mode-toggle {
+    margin-left: auto;
+}
+
+.footer > .dark-mode-toggle .dark-switch-label {
+    margin: 0.5rem;
+}
+
 .footer > .author-info {
-    margin-top: 0.5rem;
-    height: 5vh;
+    margin-top: -1rem;
+    font-size: 0.75rem;
+    font-weight: 200;
     color: rgb(242, 253, 255);
+    text-align: center;
 }
