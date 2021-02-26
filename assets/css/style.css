@@ -25,12 +25,12 @@ body {
     font-style: italic;
     color: rgb(255, 131, 96);
     text-shadow: 2px 2px rgb(23, 33, 33);
+    padding-top: 0.5rem;
 }
 
 .navbar-toggler {
     border: 0;
     color: rgb(23, 33, 33);
-    text-align: right;
 }
 
 #navigation .nav-item,
@@ -38,8 +38,22 @@ body {
     color: rgb(242, 253, 255);
     font-weight: 300;
     margin: 1rem;
+    padding-top: 1.25rem;
     font-size: 1.2rem;
     line-height: 1;
+}
+
+#navigation li {
+    text-transform: uppercase;
+}
+
+#navigation #nav-dark-switch {
+    margin: 2rem;
+}
+
+#navigation .dark-switch-label {
+    font-size: .75rem;
+    padding-top: 1rem;
 }
 
 /*  Dark Mode Switch
