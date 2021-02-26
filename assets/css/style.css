@@ -133,7 +133,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* -------------------------------------------------- Main Carousel */
+/* -------------------------------------------------- Carousel */
 
 .carousel-item {
     height: 75vh;
@@ -142,4 +142,17 @@ input:checked + .slider:before {
 .carousel-inner > .carousel-item > img {
     height: 75vh;
     object-fit: cover;
+}
+
+/* Add an opaque overlay to the carousel images - solution found on StackOverflow: https://stackoverflow.com/questions/46819577/bootstrap-4-beta-carousel-dark-overlay */
+
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.5);
 }
