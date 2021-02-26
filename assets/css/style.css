@@ -56,6 +56,10 @@ body {
     padding-top: 1rem;
 }
 
+.navbar-nav>.nav-item>.active {
+    text-shadow: 2px 2px rgb(23, 33, 33);
+}
+
 /*  Dark Mode Switch
     Code adapted from w3schools example found here: https://www.w3schools.com/howto/howto_css_switch.asp */
     
