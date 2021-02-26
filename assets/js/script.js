@@ -5,6 +5,9 @@ $(document).ready(function() {
         body.classList.toggle("body-dark-mode");
     }
 
-    let darkModeSwitch = document.getElementById("dark-mode-slider");
-    darkModeSwitch.addEventListener('click', darkMode);
+    let darkModeSwitch1 = document.getElementById("dark-mode-slider");
+    darkModeSwitch1.addEventListener('click', darkMode);
+
+    let darkModeSwitch2 = document.getElementsByClassName("dark-mode-slider")[0];
+    darkModeSwitch2.addEventListener('click', darkMode);
 });
