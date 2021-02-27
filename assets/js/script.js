@@ -1,4 +1,4 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
     
     function darkMode(event) {
         let body = document.body;
@@ -16,4 +16,4 @@
 
     let darkModeSwitch2 = document.getElementsByClassName("dark-mode-slider")[0];
     darkModeSwitch2.addEventListener('click', darkMode);
-});*/
+});

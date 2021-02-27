@@ -1,4 +1,3 @@
-/* JS for map search functionality adapted from Google Developer Docs: https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-html */
 function initAutocomplete() {
     const styledMapType = new google.maps.StyledMapType(
         [

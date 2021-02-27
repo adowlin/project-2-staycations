@@ -82,6 +82,11 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 ### Content
 
+- JavaScript for map search functionality[0], styled map types functionality[1], and night mode map styling[2] adapted from Google Developer Docs: <br>
+    [0] https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-html <br>
+    [1] https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple <br>
+    [2] https://developers.google.com/maps/documentation/javascript/examples/style-array#maps_style_array-javascript
+
 
 ### Media
 
