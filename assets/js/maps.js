@@ -1,3 +1,10 @@
+const irelandBounds = {
+    north: 55.6341979462584,
+    south: 51.20688339486562,
+    west: -11.0302734375,
+    east: -5.097656250000001,
+};
+
 function initAutocomplete() {
     const styledMapType = new google.maps.StyledMapType(
         [
@@ -87,6 +94,10 @@ function initAutocomplete() {
     // to the map type control.
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 51.89997191094052, lng: -8.470630645751955 },
+        restriction: {
+            latLngBounds: irelandBounds,
+            strictBounds: false,
+        },
         zoom: 18,
         mapTypeControlOptions: {
             mapTypeIds: ["roadmap", "styled_map"],
