@@ -5,95 +5,100 @@ const irelandBounds = {
     east: -5.097656250000001,
 };
 
-function initAutocomplete() {
+var geocoder;
+var map;
+function initialize() {
+    // create darkmode styled map variable
     const styledMapType = new google.maps.StyledMapType(
         [
-        { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-        { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
-        { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
-        {
-            featureType: "administrative.locality",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-        },
-        {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-        },
-        {
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [{ color: "#263c3f" }],
-        },
-        {
-            featureType: "poi.park",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#6b9a76" }],
-        },
-        {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{ color: "#38414e" }],
-        },
-        {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#212a37" }],
-        },
-        {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#9ca5b3" }],
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [{ color: "#746855" }],
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#1f2835" }],
-        },
-        {
-            featureType: "road.highway",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#f3d19c" }],
-        },
-        {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [{ color: "#2f3948" }],
-        },
-        {
-            featureType: "transit.station",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-        },
-        {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#17263c" }],
-        },
-        {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#515c6d" }],
-        },
-        {
-            featureType: "water",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#17263c" }],
-        },
+            { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+            {
+                featureType: "administrative.locality",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+            },
+            {
+                featureType: "poi",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "geometry",
+                stylers: [{ color: "#263c3f" }],
+            },
+            {
+                featureType: "poi.park",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#6b9a76" }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [{ color: "#38414e" }],
+            },
+            {
+                featureType: "road",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#212a37" }],
+            },
+            {
+                featureType: "road",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#9ca5b3" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry",
+                stylers: [{ color: "#746855" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "geometry.stroke",
+                stylers: [{ color: "#1f2835" }],
+            },
+            {
+                featureType: "road.highway",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#f3d19c" }],
+            },
+            {
+                featureType: "transit",
+                elementType: "geometry",
+                stylers: [{ color: "#2f3948" }],
+            },
+            {
+                featureType: "transit.station",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#d59563" }],
+            },
+            {
+                featureType: "water",
+                elementType: "geometry",
+                stylers: [{ color: "#17263c" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.fill",
+                stylers: [{ color: "#515c6d" }],
+            },
+            {
+                featureType: "water",
+                elementType: "labels.text.stroke",
+                stylers: [{ color: "#17263c" }],
+            },
         ],
         { name: "Night Map" }
     );
-    
-    // Create a map object, and include the MapTypeId to add
+
+    // Create a map object, and include the MapTypeIds to add
     // to the map type control.
-    const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 51.89997191094052, lng: -8.470630645751955 },
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(51.89997191094052, -8.470630645751955);
+    var mapOptions = {
+        center: latlng,
         restriction: {
             latLngBounds: irelandBounds,
             strictBounds: false,
@@ -102,7 +107,9 @@ function initAutocomplete() {
         mapTypeControlOptions: {
             mapTypeIds: ["roadmap", "styled_map"],
         },
-    });
+    }
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
     //Associate the styled map with the MapTypeId.
     map.mapTypes.set("styled_map", styledMapType);
 
@@ -121,60 +128,20 @@ function initAutocomplete() {
     darkModeSwitch1.addEventListener('click', darkMode);
     let darkModeSwitch2 = document.getElementsByClassName("dark-mode-slider")[0];
     darkModeSwitch2.addEventListener('click', darkMode);
+}
 
-    // Create the search box and link it to the UI element.
-    const input = document.getElementById("map-search");
-    const searchBox = new google.maps.places.SearchBox(input);
-    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-    // Bias the SearchBox results towards current map's viewport.
-    map.addListener("bounds_changed", () => {
-        searchBox.setBounds(map.getBounds());
-    });
-    let markers = [];
-    // Listen for the event fired when the user selects a prediction and retrieve
-    // more details for that place.
-    searchBox.addListener("places_changed", () => {
-        const places = searchBox.getPlaces();
-
-        if (places.length == 0) {
-            return;
+// geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
+function codeLocation() {
+    var searchlocation = document.getElementById('map-search').value;
+    geocoder.geocode( { 'address': searchlocation}, function(results, status) {
+        if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+        } else {
+        alert('Geocode was not successful for the following reason: ' + status);
         }
-        // Clear out the old markers.
-        markers.forEach((marker) => {
-            marker.setMap(null);
-        });
-        markers = [];
-        // For each place, get the icon, name and location.
-        const bounds = new google.maps.LatLngBounds();
-        places.forEach((place) => {
-            if (!place.geometry || !place.geometry.location) {
-                console.log("Returned place contains no geometry");
-                return;
-            }
-            const icon = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25),
-            };
-            // Create a marker for each place.
-            markers.push(
-                new google.maps.Marker({
-                    map,
-                    icon,
-                    title: place.name,
-                    position: place.geometry.location,
-                })
-            );
-
-            if (place.geometry.viewport) {
-                // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
-            } else {
-                bounds.extend(place.geometry.location);
-            }
-        });
-        map.fitBounds(bounds);
     });
 }

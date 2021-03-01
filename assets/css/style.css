@@ -209,8 +209,13 @@ div#map {
     min-height: 30rem;
 }
 
-/* -------------------------------------------------- Map Results */
+/* -------------------------------------------------- Map Results 
 
+.map-results-wrapper {
+    min-height: 50vh;
+    background-color: red;
+    margin-bottom: 2rem;
+}*/
 
 /* -------------------------------------------------- Footer */
 
