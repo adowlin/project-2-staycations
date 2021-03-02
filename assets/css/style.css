@@ -220,13 +220,12 @@ div#map {
     background-color: rgb(139, 230, 181);
 }
 
-/* -------------------------------------------------- Map Results 
+/* -------------------------------------------------- Map Results */
 
-.map-results-wrapper {
+#map-results-wrapper {
     min-height: 50vh;
-    background-color: red;
     margin-bottom: 2rem;
-}*/
+}
 
 /* -------------------------------------------------- Footer */
 

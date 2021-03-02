@@ -135,13 +135,33 @@ function codeLocation() {
     var searchlocation = document.getElementById('map-search').value;
     geocoder.geocode( { componentRestrictions: {country: 'IE', locality: searchlocation}},  function(results, status) {
         if (status == 'OK') {
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+            // creates a request object to be used in Places nearby search request
+            var request = {
+                location: results[0].geometry.location,
+                radius: '500',
+                type: ['restaurant']
+            };
+
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
         } else {
-        alert('Location provided is not supported. Please provide a location in Ireland.');
+            alert('Location provided is not supported. Please provide a location in Ireland.');
         }
     });
+}
+
+// adds Places request results to map-results-wrapper div (currently returns the objects, need to parse)
+function callback(results, status) {
+    let searchResultsArea = document.getElementById("map-results-wrapper");
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+            console.log(results[i]);
+            //searchResultsArea.innerHTML = (results[i]);
+        }
+    }
 }
