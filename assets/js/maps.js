@@ -133,7 +133,7 @@ function initialize() {
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
 function codeLocation() {
     var searchlocation = document.getElementById('map-search').value;
-    geocoder.geocode( { 'address': searchlocation}, function(results, status) {
+    geocoder.geocode( { componentRestrictions: {country: 'IE', locality: searchlocation}},  function(results, status) {
         if (status == 'OK') {
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
@@ -141,7 +141,7 @@ function codeLocation() {
             position: results[0].geometry.location
         });
         } else {
-        alert('Geocode was not successful for the following reason: ' + status);
+        alert('Location provided is not supported. Please provide a location in Ireland.');
         }
     });
 }
