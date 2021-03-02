@@ -90,7 +90,7 @@ function initialize() {
                 stylers: [{ color: "#17263c" }],
             },
         ],
-        { name: "Night Map" }
+        { name: 'Night Map' }
     );
 
     // Create a map object, and include the MapTypeIds to add
@@ -105,47 +105,47 @@ function initialize() {
         },
         zoom: 18,
         mapTypeControlOptions: {
-            mapTypeIds: ["roadmap", "styled_map"],
+            mapTypeIds: ['roadmap', 'styled_map'],
         },
     }
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     //Associate the styled map with the MapTypeId.
-    map.mapTypes.set("styled_map", styledMapType);
+    map.mapTypes.set('styled_map', styledMapType);
 
     //Toggle darkmode map by changing map mapTypeId
     function darkMode(event) {
         let body = document.body;
-        body.classList.toggle("body-dark-mode");
-        let darkModeStatus = body.classList.contains("body-dark-mode");
+        body.classList.toggle('body-dark-mode');
+        let darkModeStatus = body.classList.contains('body-dark-mode');
         if (darkModeStatus) {
-            map.setMapTypeId("styled_map");
+            map.setMapTypeId('styled_map');
         } else {
-            map.setMapTypeId("roadmap");
+            map.setMapTypeId('roadmap');
         };
     }
-    let darkModeSwitch1 = document.getElementById("dark-mode-slider");
+    let darkModeSwitch1 = document.getElementById('dark-mode-slider');
     darkModeSwitch1.addEventListener('click', darkMode);
-    let darkModeSwitch2 = document.getElementsByClassName("dark-mode-slider")[0];
+    let darkModeSwitch2 = document.getElementsByClassName('dark-mode-slider')[0];
     darkModeSwitch2.addEventListener('click', darkMode);
 }
 
 // get the type of search results by user by determining which search button was clicked 
 let searchType;
-let foodSearchButton = document.getElementById("search-food");
-let staysSearchButton = document.getElementById("search-stays");
-let sightsSearchButton = document.getElementById("search-sights");
+let foodSearchButton = document.getElementById('search-food');
+let staysSearchButton = document.getElementById('search-stays');
+let sightsSearchButton = document.getElementById('search-sights');
 
-foodSearchButton.addEventListener("click", function() {
-    searchType = "restaurant";
+foodSearchButton.addEventListener('click', function() {
+    searchType = 'restaurant';
 });
 
-staysSearchButton.addEventListener("click", function() {
-    searchType = "lodging";
+staysSearchButton.addEventListener('click', function() {
+    searchType = 'lodging';
 });
 
-sightsSearchButton.addEventListener("click", function() {
-    searchType = "tourist_attraction";
+sightsSearchButton.addEventListener('click', function() {
+    searchType = 'tourist_attraction';
 });
 
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
@@ -164,7 +164,7 @@ function codeLocation() {
                 radius: '500',
                 type: [searchType]
             };
-
+            // perform a nearby search
             service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request, callback);
         } else {
@@ -175,7 +175,7 @@ function codeLocation() {
 
 // adds Places request results to map-results-wrapper div (currently returns the objects, need to parse)
 function callback(results, status) {
-    let searchResultsArea = document.getElementById("map-results-wrapper");
+    let searchResultsArea = document.getElementById('map-results-wrapper');
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
             console.log(results[i]);
