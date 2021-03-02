@@ -193,31 +193,42 @@ input:checked + .slider:before {
     margin-bottom: 2rem;
 }
 
-.map-wrapper > .input-group {
+.map-wrapper > #search-form {
     margin-bottom: 1rem;
 }
 
-.map-wrapper > .input-group > #map-search {
+.map-wrapper > #search-form > #map-search {
     background-color: rgb(242, 253, 255);
     border: 0.1rem solid rgb(23, 33, 33);
     border-radius: 2.5rem;
     color: rgb(23, 33, 33);
-    padding-right: 1rem;
+    /*padding-right: 1rem;
+    margin-right: 1rem;*/
+    margin-bottom: 0.5rem;
 }
 
-div#map {
-    min-height: 30rem;
-}
-
-.map-wrapper > .input-group > .input-group-append > #search-button {
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-food,
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-stays,
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-sights {
     background-color: rgb(35, 206, 107);
     border: 0.1rem solid rgb(35, 206, 107);
     border-radius: 2.5rem;
     color: rgb(23, 33, 33);
 }
 
-.map-wrapper > .input-group > .input-group-append > #search-button:hover {
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-stays {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-food:hover,
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-stays:hover,
+.map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-sights:hover {
     background-color: rgb(139, 230, 181);
+}
+
+div#map {
+    min-height: 30rem;
 }
 
 /* -------------------------------------------------- Map Results */

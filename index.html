@@ -138,10 +138,14 @@
 
     <section id="map-container row">
         <div class="map-wrapper col-10 offset-1">
-            <form class="input-group mb-3 row" onsubmit="codeLocation();return false">
-                <input type="text" class="form-control col-8 offset-1 offset-sm-3 offset-md-4" id="map-search" placeholder="Search" aria-label="Location Search">
-                <div class="input-group-append col-4">
-                    <button class="btn btn-outline-secondary" id="search-button" type="submit">Search</button>
+            <form class="mb-3 row" id="search-form" onsubmit="codeLocation();return false">
+                <input type="text" class="form-control col-10" id="map-search" placeholder="Search" aria-label="Location Search">
+                <div class="buttons-wrapper col-10 offset-1">
+                    <div class="buttons-row row">
+                        <button class="btn btn-outline-secondary col" id="search-food" type="submit">Search Food</button>
+                        <button class="btn btn-outline-secondary col" id="search-stays" type="submit">Search Stays</button>
+                        <button class="btn btn-outline-secondary col" id="search-sights" type="submit">Search Sights</button>
+                    </div>
                 </div>
             </form>
             <div id="map"></div>
