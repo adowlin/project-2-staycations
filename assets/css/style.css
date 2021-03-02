@@ -202,7 +202,7 @@ input:checked + .slider:before {
     border: 0.1rem solid rgb(23, 33, 33);
     border-radius: 2.5rem;
     color: rgb(23, 33, 33);
-    padding-right: 10rem;
+    padding-right: 1rem;
 }
 
 div#map {
