@@ -130,6 +130,24 @@ function initialize() {
     darkModeSwitch2.addEventListener('click', darkMode);
 }
 
+// get the type of search results by user by determining which search button was clicked 
+let searchType;
+let foodSearchButton = document.getElementById("search-food");
+let staysSearchButton = document.getElementById("search-stays");
+let sightsSearchButton = document.getElementById("search-sights");
+
+foodSearchButton.addEventListener("click", function() {
+    searchType = "restaurant";
+});
+
+staysSearchButton.addEventListener("click", function() {
+    searchType = "lodging";
+});
+
+sightsSearchButton.addEventListener("click", function() {
+    searchType = "tourist_attraction";
+});
+
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
 function codeLocation() {
     var searchlocation = document.getElementById('map-search').value;
@@ -144,7 +162,7 @@ function codeLocation() {
             var request = {
                 location: results[0].geometry.location,
                 radius: '500',
-                type: ['restaurant']
+                type: [searchType]
             };
 
             service = new google.maps.places.PlacesService(map);
