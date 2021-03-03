@@ -228,6 +228,7 @@ input:checked + .slider:before {
 
 div#map {
     min-height: 30rem;
+    margin-bottom: 2rem;
 }
 
 /* -------------------------------------------------- Map Results */
@@ -235,6 +236,59 @@ div#map {
 #map-results-wrapper {
     min-height: 50vh;
     margin-bottom: 2rem;
+}
+
+#results-list {
+  /*flex-basis: 5rem;
+  flex-grow: 1;
+  padding: 1rem;*/
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /*display: flex;*/
+}
+
+#results-list > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
+
+#results-list > ul > li {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+#results-list > ul > li:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+
+#results-list > button {
+  width: 100%;
+  padding: 1rem;
+  flex-grow: 0;
+  cursor: pointer;
+  background: #1a73e8;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+#results-list > button:hover {
+  color: #c5d4f0;
+}
+
+#results-list > button:disabled {
+  background-color: #9fc1ee;
+  color: #c5d4f0;
+  cursor: auto;
 }
 
 /* -------------------------------------------------- Footer */
