@@ -130,27 +130,29 @@ function initialize() {
     darkModeSwitch2.addEventListener('click', darkMode);
 }
 
-// get the type of search results by user by determining which search button was clicked 
+// get the type of search results by user by determining which search button was clicked. on clicking a button, display the map results section & clear any existing result list items
 let searchType;
 let foodSearchButton = document.getElementById('search-food');
 let staysSearchButton = document.getElementById('search-stays');
 let sightsSearchButton = document.getElementById('search-sights');
+let resultsWrapper = document.getElementById('map-results-wrapper');
 let searchResultsList = document.getElementById('places');
 
 foodSearchButton.addEventListener('click', function() {
     searchType = 'restaurant';
+    resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
 });
 staysSearchButton.addEventListener('click', function() {
     searchType = 'lodging';
+    resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
 });
 sightsSearchButton.addEventListener('click', function() {
     searchType = 'tourist_attraction';
+    resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
 });
-
-
 
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
 function codeLocation() {
