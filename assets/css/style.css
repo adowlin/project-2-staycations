@@ -298,9 +298,9 @@ div#map {
 }
 
 #results-list > button:disabled {
-    background-color: rgb(242, 253, 255);
-    color: rgb(242, 253, 255);
-    border: 0.1rem solid rgb(242, 253, 255);
+    background-color: rgb(242, 253, 255, 0);
+    color: rgb(242, 253, 255, 0);
+    border: 0.1rem solid rgb(242, 253, 255, 0);
     cursor: auto;
 }
 

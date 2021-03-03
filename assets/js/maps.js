@@ -135,15 +135,19 @@ let searchType;
 let foodSearchButton = document.getElementById('search-food');
 let staysSearchButton = document.getElementById('search-stays');
 let sightsSearchButton = document.getElementById('search-sights');
+let searchResultsList = document.getElementById('places');
 
 foodSearchButton.addEventListener('click', function() {
     searchType = 'restaurant';
+    searchResultsList.innerHTML = '';
 });
 staysSearchButton.addEventListener('click', function() {
     searchType = 'lodging';
+    searchResultsList.innerHTML = '';
 });
 sightsSearchButton.addEventListener('click', function() {
     searchType = 'tourist_attraction';
+    searchResultsList.innerHTML = '';
 });
 
 
@@ -221,7 +225,6 @@ function addPlaces(places, map) {
             });
             // darkmode function that affects results list
             function darkMode2(event) {
-                let body = document.body;
                 li.classList.toggle('body-dark-mode');
             }
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
