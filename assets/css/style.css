@@ -202,8 +202,6 @@ input:checked + .slider:before {
     border: 0.1rem solid rgb(23, 33, 33);
     border-radius: 2.5rem;
     color: rgb(23, 33, 33);
-    /*padding-right: 1rem;
-    margin-right: 1rem;*/
     margin-bottom: 0.5rem;
 }
 
@@ -214,6 +212,7 @@ input:checked + .slider:before {
     border: 0.1rem solid rgb(35, 206, 107);
     border-radius: 2.5rem;
     color: rgb(23, 33, 33);
+    font-size: 0.75rem;
 }
 
 .map-wrapper > #search-form > .buttons-wrapper > .buttons-row > #search-stays {
