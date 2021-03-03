@@ -295,7 +295,7 @@ div#map {
 }
 
 #results-list > button:hover {
-    color: rgb(139, 230, 181);
+    background-color: rgb(139, 230, 181);
 }
 
 #results-list > button:disabled {
