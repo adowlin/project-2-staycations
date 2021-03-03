@@ -239,56 +239,54 @@ div#map {
 }
 
 #results-list {
-  /*flex-basis: 5rem;
-  flex-grow: 1;
-  padding: 1rem;*/
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  /*display: flex;*/
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 #results-list > ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  overflow-y: scroll;
-  flex-grow: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
 }
 
 #results-list > ul > li {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 1.25rem;
-  cursor: pointer;
+    background-color: rgb(139, 230, 181, 0.75);
+    padding: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 #results-list > ul > li:nth-child(odd) {
-  background-color: #fcfcfc;
+    background-color: rgb(35, 206, 107, 0.75);
 }
 
 #results-list > button {
-  width: 100%;
-  padding: 1rem;
-  flex-grow: 0;
-  cursor: pointer;
-  background: #1a73e8;
-  font-size: 1.5rem;
-  color: white;
-  border: none;
+    width: 100%;
+    padding: 1rem;
+    flex-grow: 0;
+    cursor: pointer;
+    background: rgb(35, 206, 107);
+    font-size: 1.5rem;
+    color: rgb(23, 33, 33);
+    border: 0.1rem solid rgb(35, 206, 107);
+    border-radius: 2.5rem;
 }
 
 #results-list > button:hover {
-  color: #c5d4f0;
+    color: rgb(139, 230, 181);
 }
 
 #results-list > button:disabled {
-  background-color: #9fc1ee;
-  color: #c5d4f0;
-  cursor: auto;
+    background-color: rgb(242, 253, 255);
+    color: rgb(242, 253, 255);
+    border: 0.1rem solid rgb(242, 253, 255);
+    cursor: auto;
 }
 
 /* -------------------------------------------------- Footer */
