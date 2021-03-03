@@ -139,14 +139,14 @@ let sightsSearchButton = document.getElementById('search-sights');
 foodSearchButton.addEventListener('click', function() {
     searchType = 'restaurant';
 });
-
 staysSearchButton.addEventListener('click', function() {
     searchType = 'lodging';
 });
-
 sightsSearchButton.addEventListener('click', function() {
     searchType = 'tourist_attraction';
 });
+
+
 
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
 function codeLocation() {
@@ -178,7 +178,8 @@ function callback(results, status) {
     let searchResultsArea = document.getElementById('map-results-wrapper');
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i]);
+            let searchResults = results[i]
+            console.log(searchResults);
             //searchResultsArea.innerHTML = (results[i]);
         }
     }
