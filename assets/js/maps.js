@@ -219,6 +219,15 @@ function addPlaces(places, map) {
             li.addEventListener("click", () => {
                 map.setCenter(place.geometry.location);
             });
+            // darkmode function that affects results list
+            function darkMode2(event) {
+                let body = document.body;
+                li.classList.toggle('body-dark-mode');
+            }
+            let darkModeSwitch1 = document.getElementById('dark-mode-slider');
+            darkModeSwitch1.addEventListener('click', darkMode2);
+            let darkModeSwitch2 = document.getElementsByClassName('dark-mode-slider')[0];
+            darkModeSwitch2.addEventListener('click', darkMode2);
         }
     }
 }

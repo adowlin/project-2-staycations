@@ -250,10 +250,12 @@ div#map {
     margin: 0;
     overflow-y: scroll;
     flex-grow: 1;
+    margin-bottom: 1rem;
 }
 
 #results-list > ul > li {
-    background-color: rgb(139, 230, 181, 0.75);
+    background-color: rgb(139, 230, 181, 0.25);
+    color: rgb(23, 33, 33);
     padding: 1rem;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -263,8 +265,21 @@ div#map {
 }
 
 #results-list > ul > li:nth-child(odd) {
-    background-color: rgb(35, 206, 107, 0.75);
+    background-color: rgb(139, 230, 181);
 }
+
+/* dark mode styles for results list */
+
+#results-list > ul > .body-dark-mode {
+    background-color: rgb(21, 122, 110, 0.25);
+    color: rgb(242, 253, 255);
+}
+
+#results-list > ul > .body-dark-mode:nth-child(odd) {
+    background-color: rgb(21, 122, 110);
+}
+
+/* pagination button */
 
 #results-list > button {
     width: 100%;
