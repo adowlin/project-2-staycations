@@ -222,15 +222,3 @@ function addPlaces(places, map) {
         }
     }
 }
-
-/* adds Places request results to map-results-wrapper div (currently returns the objects, need to parse)
-function callback(results, status) {
-    let searchResultsArea = document.getElementById('map-results-wrapper');
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            let searchResults = results[i]
-            console.log(searchResults);
-            //searchResultsArea.innerHTML = (results[i]);
-        }
-    }
-}*/
