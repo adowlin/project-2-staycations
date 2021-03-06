@@ -379,3 +379,15 @@ footer {
 #form-section > .form-dark-mode {
     color: rgb(242, 253, 255);
 }
+
+#form-submit-btn {
+    background-color: rgb(35, 206, 107);
+    border: 0.1rem solid rgb(35, 206, 107);
+    border-radius: 2.5rem;
+    color: rgb(23, 33, 33);
+    font-size: 1rem;
+}
+
+#form-submit-btn:hover {
+    background-color: rgb(139, 230, 181);
+}
