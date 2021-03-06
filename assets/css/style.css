@@ -375,3 +375,7 @@ footer {
     font-size: 1rem;
     color: rgb(23, 33, 33);
 }
+
+#form-section > .form-dark-mode {
+    color: rgb(242, 253, 255);
+}
