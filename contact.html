@@ -146,15 +146,15 @@
         <form name="contactForm" class="form-wrapper col-10 offset-1" onsubmit="return sendMail(this);">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+                <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Jane Doe">
+                <input name="name" type="text" class="form-control" id="name" placeholder="Jane Doe" required>
             </div>
             <div class="mb-3">
                 <label for="textArea" class="form-label">Your Query</label>
-                <textarea name="textArea" class="form-control" id="textArea" rows="3"></textarea>
+                <textarea name="textArea" class="form-control" id="textArea" rows="3" required></textarea>
             </div>
             <div class="contact-btn-wrapper row">
                 <button class="btn btn-outline-secondary col-6 offset-3 col-md-4 offset-md-4 col-lg-2 offset-lg-5" id="form-submit-btn" type="submit">Submit</button>
