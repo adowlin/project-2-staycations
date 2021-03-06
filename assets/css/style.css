@@ -365,3 +365,13 @@ footer {
     color: rgb(242, 253, 255);
     text-align: center;
 }
+
+/* -------------------------------------------------- Contact Form */
+
+#form-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 1rem;
+    color: rgb(23, 33, 33);
+}
