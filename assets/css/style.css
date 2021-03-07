@@ -176,7 +176,7 @@ input:checked + .slider:before {
 
 .header-text {
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     left: 1.8vh;
     right: auto;
     width: 96.6vw;
@@ -398,4 +398,12 @@ footer {
 
 #form-submit-btn:hover {
     background-color: rgb(139, 230, 181);
+}
+
+/* -------------------------------------------------- Media Queries */
+
+@media (min-width:430px){
+    .header-text {
+        top: 20vh;
+    }
 }
