@@ -235,11 +235,13 @@ function addPlaces(places, map) {
             placeLinkSpan.setAttribute('style', 'float: right;');
             placeLinkUrl.setAttribute('href', 'https://www.google.ie/search?q=' + placeName + '&near=' + searchLocation);
             placeLinkUrl.setAttribute('target', '_blank');
+            placeLinkUrl.setAttribute('style', 'color: rgb(23, 33, 33);');
             placeLinkUrl.innerHTML = "Details";
 
             // darkmode function that affects results list
             function darkMode2(event) {
                 li.classList.toggle('body-dark-mode');
+                placeLinkUrl.setAttribute('style', 'color: rgb(242, 253, 255);');
             }
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
             darkModeSwitch1.addEventListener('click', darkMode2);
