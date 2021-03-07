@@ -14,7 +14,7 @@ function sendMail(contactForm) {
     emailjs.send("service_6i30xfe","staycations_l6aihjr", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.email.value,
-        "message_body": contactForm.textArea.value
+        "message": contactForm.textArea.value
     })
     .then(
         function(response) {
