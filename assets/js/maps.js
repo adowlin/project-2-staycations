@@ -223,6 +223,18 @@ function addPlaces(places, map) {
             li.addEventListener("click", () => {
                 map.setCenter(place.geometry.location);
             });
+            
+            // create a link to each place's website or google place details
+            let placeLinkSpan = document.createElement("span");
+            let placeLinkUrl = document.createElement("a");
+            placeLinkSpan.appendChild(placeLinkUrl);
+            li.appendChild(placeLinkSpan);
+
+            placeLinkSpan.setAttribute('style', 'float: right;');
+            placeLinkUrl.setAttribute('href', 'https://www.google.com');
+            placeLinkUrl.setAttribute('target', '_blank');
+            placeLinkUrl.innerHTML = "Website";
+
             // darkmode function that affects results list
             function darkMode2(event) {
                 li.classList.toggle('body-dark-mode');
