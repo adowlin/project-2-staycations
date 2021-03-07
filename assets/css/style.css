@@ -21,6 +21,10 @@ body::-webkit-scrollbar {
     background-color: rgb(23, 33, 33);
 }
 
+.row {
+    --bs-gutter-x: 0;
+}
+
 /* -------------------------------------------------- Navbar */
 
 #navigation {
