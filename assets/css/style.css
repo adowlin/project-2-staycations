@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .body-dark-mode {
     background-color: rgb(23, 33, 33);
 }
