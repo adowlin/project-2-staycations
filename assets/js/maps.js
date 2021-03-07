@@ -124,11 +124,8 @@ function initialize() {
             map.setMapTypeId('roadmap');
         };
     }
-    let darkModeSwitches = document.querySelectorAll(".dark-mode-slider");
-    for (var i = 0; i < darkModeSwitches.length; i++) {
-        darkModeSwitches[i].addEventListener("click", darkMode);
-        console.log(darkModeSwitches);
-    }
+    let darkModeSwitch = document.getElementById("dark-mode-slider");
+    darkModeSwitch.addEventListener("click", darkMode);
 }
 
 // get the type of search results by user by determining which search button was clicked. on clicking a button, display the map results section & clear any existing result list items

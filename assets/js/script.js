@@ -6,11 +6,8 @@ $(document).ready(function() {
         body.classList.toggle('body-dark-mode');
         form.classList.toggle('form-dark-mode');
     }
-    let darkModeSwitches = document.querySelectorAll(".dark-mode-slider");
-    for (var i = 0; i < darkModeSwitches.length; i++) {
-        darkModeSwitches[i].addEventListener("click", darkMode);
-        console.log(darkModeSwitches);
-    }
+    let darkModeSwitch = document.getElementById("dark-mode-slider");
+    darkModeSwitch.addEventListener("click", darkMode);
 });
 
 function sendMail(contactForm) {
