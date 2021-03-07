@@ -21,6 +21,14 @@ body::-webkit-scrollbar {
     background-color: rgb(23, 33, 33);
 }
 
+.link-light-mode {
+    color: rgb(23, 33, 33);
+}
+
+.link-dark-mode {
+    color: rgb(242, 253, 255);
+}
+
 .row {
     --bs-gutter-x: 0;
 }

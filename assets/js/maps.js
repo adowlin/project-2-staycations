@@ -235,21 +235,24 @@ function addPlaces(places, map) {
             placeLinkSpan.setAttribute('style', 'float: right;');
             placeLinkUrl.setAttribute('href', 'https://www.google.ie/search?q=' + placeName + '&near=' + searchLocation);
             placeLinkUrl.setAttribute('target', '_blank');
-            placeLinkUrl.setAttribute('style', 'color: rgb(23, 33, 33);');
+            placeLinkUrl.classList.add('link-light-mode');
             placeLinkUrl.innerHTML = "Details";
 
+            let body = document.body;
+            let darkModeStatus = body.classList.contains('body-dark-mode');
             // darkmode function that affects results list
             function darkMode2(event) {
                 li.classList.toggle('body-dark-mode');
-                placeLinkUrl.setAttribute('style', 'color: rgb(242, 253, 255);');
+                placeLinkUrl.classList.toggle('link-light-mode');
+                placeLinkUrl.classList.toggle('link-dark-mode');
             }
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
             darkModeSwitch1.addEventListener('click', darkMode2);
             // if statement to check if dark mode is already enabled before a search is initiated, if so then set the results list style to dark theme
-            let body = document.body;
-            let darkModeStatus = body.classList.contains('body-dark-mode');
             if (darkModeStatus) {
                 li.classList.toggle('body-dark-mode');
+                placeLinkUrl.classList.toggle('link-light-mode');
+                placeLinkUrl.classList.toggle('link-dark-mode');
             }
         }
     }
