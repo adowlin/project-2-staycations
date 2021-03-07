@@ -154,8 +154,8 @@ sightsSearchButton.addEventListener('click', function() {
 
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
 function codeLocation() {
-    var searchlocation = document.getElementById('map-search').value;
-    geocoder.geocode( { componentRestrictions: {country: 'IE', locality: searchlocation}},  function(results, status) {
+    var searchLocation = document.getElementById('map-search').value;
+    geocoder.geocode( { componentRestrictions: {country: 'IE', locality: searchLocation}},  function(results, status) {
         if (status == 'OK') {
             map.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
@@ -224,16 +224,18 @@ function addPlaces(places, map) {
                 map.setCenter(place.geometry.location);
             });
             
-            // create a link to each place's website or google place details
+            // create a link to google search results for each place in results list
+            let searchLocation = document.getElementById('map-search').value;
             let placeLinkSpan = document.createElement("span");
             let placeLinkUrl = document.createElement("a");
+            let placeName = place.name;
             placeLinkSpan.appendChild(placeLinkUrl);
             li.appendChild(placeLinkSpan);
 
             placeLinkSpan.setAttribute('style', 'float: right;');
-            placeLinkUrl.setAttribute('href', 'https://www.google.com');
+            placeLinkUrl.setAttribute('href', 'https://www.google.ie/search?q=' + placeName + '&near=' + searchLocation);
             placeLinkUrl.setAttribute('target', '_blank');
-            placeLinkUrl.innerHTML = "Website";
+            placeLinkUrl.innerHTML = "Details";
 
             // darkmode function that affects results list
             function darkMode2(event) {
