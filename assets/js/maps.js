@@ -229,6 +229,12 @@ function addPlaces(places, map) {
             }
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
             darkModeSwitch1.addEventListener('click', darkMode2);
+            // if statement to check if dark mode is already enabled before a search is initiated, if so then set the results list style to dark theme
+            let body = document.body;
+            let darkModeStatus = body.classList.contains('body-dark-mode');
+            if (darkModeStatus) {
+                li.classList.toggle('body-dark-mode');
+            }
         }
     }
 }
