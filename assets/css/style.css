@@ -311,10 +311,10 @@ footer {
     height: 15vh;
     background-color: rgb(21, 122, 110);
     margin-bottom: 0;
+    text-align: center;
 }
 
-.footer > .contact-links,
-.footer > .dark-mode-toggle {
+.footer > .contact-links {
     margin-top: 1rem;
     color: rgb(242, 253, 255);
 }
@@ -348,14 +348,6 @@ footer {
 
 .social-links a:hover {
     color: rgb(139, 230, 181);
-}
-
-.footer > .dark-mode-toggle {
-    margin-left: auto;
-}
-
-.footer > .dark-mode-toggle .dark-switch-label {
-    margin: 0.5rem;
 }
 
 .footer > .author-info {
