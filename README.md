@@ -4,7 +4,7 @@
 
 In the Éire is a website where users can search for holiday destinations within Ireland. This website was created for my second milestone project as part of the Diploma in Full Stack Software Development course with Code Institute. The website is responsive on all device sizes.
 
-[insert mockups image here]
+<img src="readme-assets/images/staycations-mockups.png" alt="responsive site mockups">
  
 ## User Experience (UX)
 
