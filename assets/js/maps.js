@@ -229,8 +229,6 @@ function addPlaces(places, map) {
             }
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
             darkModeSwitch1.addEventListener('click', darkMode2);
-            let darkModeSwitch2 = document.getElementsByClassName('dark-mode-slider')[0];
-            darkModeSwitch2.addEventListener('click', darkMode2);
         }
     }
 }
