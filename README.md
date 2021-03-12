@@ -145,11 +145,24 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 - JavaScript for map search functionality[0], styled map types functionality[1], night mode map styling[2], and nearby search functionality with pagination[3] adapted from Google Developer Docs: <br>
     [0] https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-html <br>
     [1] https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple <br>
-    [2] https://developers.google.com/maps/documentation/javascript/examples/style-array#maps_style_array-javascript
+    [2] https://developers.google.com/maps/documentation/javascript/examples/style-array#maps_style_array-javascript <br>
     [3] https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-css 
 
 
 ### Media
 
+- Images for carousels on both site pages downloaded from [Unsplash](https://unsplash.com/):
+    - index.html images: <br>
+    https://unsplash.com/photos/ezJhm4xrHAM <br>
+    https://unsplash.com/photos/DXQB5D1njMY <br>
+    https://unsplash.com/photos/FauBUuNPq5k <br>
+    https://unsplash.com/photos/0U_gjae2TKo <br>
+    https://unsplash.com/photos/NPxkSK-makg <br>
+    - contact.html images: <br>
+    https://unsplash.com/photos/4AmyOdXZAQc <br>
+    https://unsplash.com/photos/NUiQpGnj9rI <br>
+    https://unsplash.com/photos/wAOKtzvZ350 <br>
+    https://unsplash.com/photos/Je3QrqntkSs <br>
+    https://unsplash.com/photos/nNtFxF6ny5c <br>
 
 ### Acknowledgements
