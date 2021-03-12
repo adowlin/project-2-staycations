@@ -65,6 +65,27 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 ## Technologies Used
 
+- Languages Used:
+    - [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    - [CSS3](https://en.wikipedia.org/wiki/CSS)
+    - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+- Frameworks, Libraries, Programs Used:
+    - [Bootstrap v5.0](https://getbootstrap.com/docs/5.0):
+        - Used to help with styling, responsiveness & structure of site.
+    - [JQuery v3.5.1](https://jquery.com/):
+        - Used to help reduce complexity of JavaScript code in places.
+    - [Google Fonts](https://fonts.google.com/):
+         - Used to import [Merriweather](https://fonts.google.com/specimen/Merriweather) and [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans) fonts.
+    - [FontAwesome](https://fontawesome.com/):
+        - Used to add social media icons to footer links.
+    - [Gitpod](https://www.gitpod.io/):
+        - Used for the site's development environment.
+    - [Git](https://git-scm.com/):
+        - Used via the Gitpod terminal to make regular commits, and push to GitHub.
+    - [GitHub](https://github.com/) & [GitHub Pages](https://pages.github.com/):
+        - Used to store the site's code & to host the deployed site.
+
 ## Testing
 
 
