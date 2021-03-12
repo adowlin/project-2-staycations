@@ -73,7 +73,7 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 - Frameworks, Libraries, Programs Used:
     - [Bootstrap v5.0](https://getbootstrap.com/docs/5.0):
         - Used to help with styling, responsiveness & structure of site.
-    - [JQuery v3.5.1](https://jquery.com/):
+    - [JQuery v3.6.0](https://jquery.com/):
         - Used to help reduce complexity of JavaScript code in places.
     - [Google Fonts](https://fonts.google.com/):
          - Used to import [Merriweather](https://fonts.google.com/specimen/Merriweather) and [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans) fonts.
