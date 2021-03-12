@@ -131,12 +131,38 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 
 ## Deployment
 
+The project used the [Gitpod](https://www.gitpod.io/) environment during development, and used Git to commit and push to GitHub, using the terminal feature within GitPod.
 
 ### GitHub Pages
 
+The project was deployed to GitHub Pages following the below steps:
+
+1. Log in to GitHub and locate the [repository](https://github.com/adowlin/project-2-staycations).
+2. In the Repository's nav menu, click on the "Settings" button.
+3. Scroll down in the Settings page to the "GitHub Pages" section.
+4. Click the dropdown labelled "None" under "Source", and select the "Master" branch.
+5. Click the "Save" button, the page will automatically refresh.
+6. Scroll down the page again to the "GitHub Pages" section to locate the now published [link](https://adowlin.github.io/project-2-staycations/).
 
 ### Local Deployment
 
+To run this project using Gitpod, you will need to use the Google Chrome browser, and [a GitHub account](https://github.com/). Then, follow the below steps:
+
+1. Install the [Gitpod Chrome Browser Extension](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki?hl=en).
+2. Log in to [Gitpod](https://gitpod.io/) using your GitHub account.
+3. Head to this project's [GitHub Repository](https://github.com/adowlin/project-2-staycations).
+4. Click the green "Gitpod" button that now appears in the top right corner of the repository, which creates a new Gitpod workspace using the code from the GitHub repo.
+5. In the Gitpod workspace's terminal window, run the command `python3 -m http.server` to deploy a local version of the site.
+6. Click on the "Open Ports" tab, then click the "Open Browser" button on port 8000 to open the local deployment preview in a new browser tab.
+
+To run this project using a local IDE, for example VSCode, follow these steps to clone the project:
+
+1. Locate the project's [repository](https://github.com/adowlin/project-2-staycations) in GitHub.
+2. Above the list of files, click the "Code" button.
+3. To clone the repository using HTTPS, copy the link under "HTTPS" in the dropdown box.
+4. Open Git Bash and change the current working directory to the location you want the cloned directory to be.
+5. Type git clone, and paste the URL copied in Step 3, then press entering.
+6. Your local clone will be created.
 
 ## Credits
 
@@ -147,7 +173,6 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
     [1] https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple <br>
     [2] https://developers.google.com/maps/documentation/javascript/examples/style-array#maps_style_array-javascript <br>
     [3] https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-css 
-
 
 ### Media
 
