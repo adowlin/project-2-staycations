@@ -37,7 +37,7 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 - Wireframes were created using [Balsamiq](https://balsamiq.com/):
 
-    - [All wireframes PDF](/readme-assets/staycations-wireframes.pdf)
+    - [Wireframes PDF](/readme-assets/staycations-wireframes.pdf)
 
 - Flowchart created using [draw.io](https://app.diagrams.net/):
 
@@ -47,12 +47,23 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 ### Existing Features
 
+- **Front Page with image carousel & lead text:** Allows users to see various sites around Ireland, while the lead text briefly explains the purpose of the site to new users.
+- **Collapsable nav bar links:** Allows users to navigate between the home page & contact page without needing to use their browser navigation buttons. Nav links collapse into a hamburger button on smaller screens to improve responsiveness.
+- **Dark mode theme slider:** Included in the nav bar links, allows users to toggle between dark & light mode themes of the site, depending on their preference.
+- **Searchbar input & buttons:** Allows users to search for their desired locations within Ireland, buttons allow users to filter the returned search results by food, accomodation, and attractions.
+- **Google Map window:** Centers over the user's search location, and re-centers over each place in search results list when that result is clicked on in the list. Allows users to visualise the location of each place as they work down through the list of search results.
+- **Google Places search results list:** Returns a list of nearby food establishments, accomodation, or tourist attractions, nearby to the location which the user has searched. Allows users to click on the list item for each result to display that place on the map. Also included a "Load More Results" button to allow the user to extend the list to include more search results.
+- **"Details" link on each search result item:** Allows users to find out more information about, and possibly book, the places in the  results list. Opens a Google search for the place in a new browser tab.
+- **Footer:** Contains links to the Contact page, and links to the hypothetical social media profiles for the website/site owner, allowing for easy navigation.
+- **Contact Page image carousel with lead text:** Displays more photos from sites around Ireland, and explains the purpose of the Contact Page.
+- **Contact form with EmailJS:** Allows users to send an email to the site owner, while validating the informaiton input into the form.
+- **Success/Failure alert box for contact form:** Displays a message to users to inform them of whether their attempt to send an email via the form was successful or not.
 
 ### Features Left to Implement
 
+- **Dark mode slider - save setting upon navigation to another site page:** Would save the user's dark mode preferences when they navigate to another page on the website. This would allow them to enable dark mode on one page, and have dark mode automatically enabled on another page that they navigate to, until dark mode is disabled.
 
 ## Technologies Used
-
 
 ## Testing
 
