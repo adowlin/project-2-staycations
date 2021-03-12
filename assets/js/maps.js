@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const irelandBounds = {
     north: 55.6341979462584,
     south: 51.20688339486562,
@@ -107,7 +109,7 @@ function initialize() {
         mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'styled_map'],
         },
-    }
+    };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     //Associate the styled map with the MapTypeId.
@@ -122,7 +124,7 @@ function initialize() {
             map.setMapTypeId('styled_map');
         } else {
             map.setMapTypeId('roadmap');
-        };
+        }
     }
     let darkModeSwitch = document.getElementById("dark-mode-slider");
     darkModeSwitch.addEventListener("click", darkMode);
