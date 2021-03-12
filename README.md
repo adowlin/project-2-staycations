@@ -91,6 +91,7 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 ## Testing
 
+The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/), and [JSHint](https://jshint.com/) services were used to validate all code used on this site, and to ensure that no syntax or logic errors were present.
 
 ### Testing User Stories from User Experience (UX) section
 
