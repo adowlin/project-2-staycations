@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 $(document).ready(function() {
     
     function darkMode(event) {
@@ -25,7 +27,7 @@ function sendMail(contactForm) {
             console.log("FAILED", error);
             alert("Message failed to send. Please try again later");
         }
-    )
+    );
 
     document.contactForm.reset(); // clears the form data when submitted
     return false; // prevents page reload
