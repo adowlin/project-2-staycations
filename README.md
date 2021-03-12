@@ -95,6 +95,30 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 
 ### Testing User Stories from User Experience (UX) section
 
+- As a first-time visitor, I want to;
+    1. Search for holiday destinations in Ireland:
+        - Upon entering the site, I am greeted with visual images of Irish scenery, which provide encouragement and inspiration to book an Ireland-based holiday.
+        - Upon entering the site, I am shown information in the lead text about how to use the site to find a holiday destination in Ireland, and should notice the presence of a searchbar at the bottom of the viewport.
+        - When scrolling down the front page of the site, I am intuitively invited to search for a location in Ireland in the search bar.
+        - The presence of a Google Map box intuitively shows me that I will be able to see locations in Ireland on the map.
+    2. See places of interest and attractions near my preferred destination:
+        - With the presence of 3 search buttons, I see that there is an options to filter search results to show "Sights" near the location that I have searched for.
+    3. Find & book accomodation & restaurants near my preferred destination:
+        - Similarly, the 3 search buttons also present me with the options to filter my search results by "Food" and "Stays" - to search for restaurants and accommodation near the location that I have entered into the search bar.
+        - Upon viewing the list of search results for either food or accomodation near my search location, I am presented with an intuitive "Details" link for each search result.
+        - Upon clicking the "Details" link, I am brought to a Google search results page in a new tab, which provided me with the relevant information and website links in order to make a bookings with restaurants, hotels, B&Bs, hostels, etc.
+    4. Contact the site owner with any questions:
+        - When first viewing the site, I can see link to the "Contact" page in the navigation links.
+        - When I scroll to the bottom of the site's front page, I find another link to the site's "Contact" page, along with links to the site's social media profiles.
+        - Upon visiting the site's "Contact" page, I am presented with information about how to get in touch with the site owner, by using the page's embedded contact form.
+        - Upon filling in the contact form, I am presented with intuitive popovers if the information I have entered is in an incorrect format for the current form input type.
+        - When I submit the form, I am presented with a browser alert box, which informs me if my query has been sent successfully, or if I need to try to send my query again later.
+
+- As a returning visitor, I want to;
+    1. Search for new holiday destinations in Ireland:
+        - Upon re-entering the site, I can scroll immediatly to the search function, which allows me to search for a new location within Ireland.
+    2. Find restaurants & attractions near my current location, if I am already on holiday:
+        - Upon re-entering the site, I can re-enter my location in the searchbar, and search for only restaurants, or only attractions, by utilising the relevant search button underneath the searchbar.
 
 ### Further Testing
 
