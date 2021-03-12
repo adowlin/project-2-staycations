@@ -33,6 +33,9 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 - Typography:
     - Using [Google Fonts](https://fonts.google.com/), I chose [Merriweather](https://fonts.google.com/specimen/Merriweather) for the site's logo and headings, paired with [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans) for the site's main text.
 
+- Images:
+    - Used [Unsplash](https://unsplash.com/) to find images of Irish scenery.
+
 ### Wireframes
 
 - Wireframes were created using [Balsamiq](https://balsamiq.com/):
