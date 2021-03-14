@@ -122,6 +122,25 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 
 ### Further Testing
 
+The website's functionality was tested across multiple browsers and device types. This ensured that it is responsive across a wide range of device sizes, and that the code used is supported by a wide range of browsers.
+
+- Browsers tested:
+    - Chrome (Windows, macOS, iOS, Android)
+    - Safari (macOS, iOS)
+    - Microsoft Edge (Windows, macOS)
+    - Internet Explorer (Windows)
+    - Firefox (Windows, macOS)
+    - Samsung Browser (Android)
+- Devices tested:
+    - iPhone XS
+    - Samsung Galaxy Edge
+    - Desktop PC
+    - Laptop
+    - Tablet
+
+- All links, button, and features worked as expected on all of the above listed browsers and device types.
+- The website was found to be fully responsive on all device sizes ranging from 275px X 400px to 1920px X 1080px.
+- The website and it's documentation were reviewed by family and friends, to double check for grammatical errors & missed bugs, and to test the user experience.
 
 ### Known Bugs
 
