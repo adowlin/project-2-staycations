@@ -151,6 +151,16 @@ The website's functionality was tested across multiple browsers and device types
 
 ### Bugs Found & Fixed
 
+- When the dark mode theme was applied to the page before a search took place, when the search was initiated the list of results had it's light mode theme applied, instead of it's dark mode theme.
+    - This was fixed by adding an if statement to the maps.js file. This statement checks if dark mode is already enabled before a search is initiated, if so then it sets the results list style to it's dark mode theme:<br>
+    ```javascript
+    let darkModeStatus = body.classList.contains('body-dark-mode');
+    if (darkModeStatus) {
+        li.classList.toggle('body-dark-mode');
+        placeLinkUrl.classList.toggle('link-light-mode');
+        placeLinkUrl.classList.toggle('link-dark-mode');
+    }
+    ```
 
 ## Deployment
 
