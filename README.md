@@ -8,7 +8,7 @@ In the Éire is a website where users can search for holiday destinations within
  
 ## User Experience (UX)
 
-With international travel restrictions throughout the COVID-19 pandemic, "staycations" - holidays within Ireland - have grown in popularity. This website will allow users to search for holiday destinations within Ireland, providing information about accommodation, restaurants, and attractions in that they search for. The website will advance the user's goals of finding holiday destinations in Ireland by providing this search feature. It will also advance the site owner's goals of promoting Irish businesses, and finding holiday destinations being a user of the site themselves.
+With international travel restrictions throughout the COVID-19 pandemic, "staycations" - holidays within Ireland - have grown in popularity. This website will allow users to search for holiday destinations within Ireland. It will provide information about accommodation, restaurants, and attractions near the locations that users will search for. The website will advance the user's goals of finding holiday destinations in Ireland by providing this search feature. It will also advance the site owner's goals of promoting Irish businesses, and finding holiday destinations being a user of the site themselves.
 
 ### User Stories
 
@@ -54,17 +54,13 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 - **Collapsable nav bar links:** Allows users to navigate between the home page & contact page without needing to use their browser navigation buttons. Nav links collapse into a hamburger button on smaller screens to improve responsiveness.
 - **Dark mode theme slider:** Included in the nav bar links, allows users to toggle between dark & light mode themes of the site, depending on their preference.
 - **Searchbar input & buttons:** Allows users to search for their desired locations within Ireland, buttons allow users to filter the returned search results by food, accomodation, and attractions.
-- **Google Map window:** Centers over the user's search location, and re-centers over each place in search results list when that result is clicked on in the list. Allows users to visualise the location of each place as they work down through the list of search results.
+- **Google Map window:** Centers on the user's search location, and re-centers on each place in the list of search results when a list item is clicked. Allows users to visualise the location of each place as they work down through the list of search results.
 - **Google Places search results list:** Returns a list of nearby food establishments, accomodation, or tourist attractions, nearby to the location which the user has searched. Allows users to click on the list item for each result to display that place on the map. Also included a "Load More Results" button to allow the user to extend the list to include more search results.
 - **"Details" link on each search result item:** Allows users to find out more information about, and possibly book, the places in the  results list. Opens a Google search for the place in a new browser tab.
 - **Footer:** Contains links to the Contact page, and links to the hypothetical social media profiles for the website/site owner, allowing for easy navigation.
 - **Contact Page image carousel with lead text:** Displays more photos from sites around Ireland, and explains the purpose of the Contact Page.
-- **Contact form with EmailJS:** Allows users to send an email to the site owner, while validating the informaiton input into the form.
+- **Contact form with EmailJS:** Allows users to send an email to the site owner, while validating the information input into the form.
 - **Success/Failure alert box for contact form:** Displays a message to users to inform them of whether their attempt to send an email via the form was successful or not.
-
-### Features Left to Implement
-
-- **Dark mode slider - save setting upon navigation to another site page:** Would save the user's dark mode preferences when they navigate to another page on the website. This would allow them to enable dark mode on one page, and have dark mode automatically enabled on another page that they navigate to, until dark mode is disabled.
 
 ## Technologies Used
 
@@ -75,7 +71,7 @@ With international travel restrictions throughout the COVID-19 pandemic, "stayca
 
 - Frameworks, Libraries, Programs Used:
     - [Bootstrap v5.0](https://getbootstrap.com/docs/5.0):
-        - Used to help with styling, responsiveness & structure of site.
+        - Used to help with styling, responsiveness & structure of the site.
     - [JQuery v3.6.0](https://jquery.com/):
         - Used to help reduce complexity of JavaScript code in places.
     - [Google Fonts](https://fonts.google.com/):
@@ -98,17 +94,17 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 - As a first-time visitor, I want to;
     1. Search for holiday destinations in Ireland:
         - Upon entering the site, I am greeted with visual images of Irish scenery, which provide encouragement and inspiration to book an Ireland-based holiday.
-        - Upon entering the site, I am shown information in the lead text about how to use the site to find a holiday destination in Ireland, and should notice the presence of a searchbar at the bottom of the viewport.
+        - Upon entering the site, I am shown information in the lead text about how to use the site to find a holiday destination in Ireland, and should notice the presence of a search bar at the bottom of the viewport.
         - When scrolling down the front page of the site, I am intuitively invited to search for a location in Ireland in the search bar.
         - The presence of a Google Map box intuitively shows me that I will be able to see locations in Ireland on the map.
     2. See places of interest and attractions near my preferred destination:
-        - With the presence of 3 search buttons, I see that there is an options to filter search results to show "Sights" near the location that I have searched for.
+        - With the presence of 3 search buttons, I see that there is an option to filter search results to show "Sights" near the location that I have searched for.
     3. Find & book accomodation & restaurants near my preferred destination:
         - Similarly, the 3 search buttons also present me with the options to filter my search results by "Food" and "Stays" - to search for restaurants and accommodation near the location that I have entered into the search bar.
         - Upon viewing the list of search results for either food or accomodation near my search location, I am presented with an intuitive "Details" link for each search result.
-        - Upon clicking the "Details" link, I am brought to a Google search results page in a new tab, which provided me with the relevant information and website links in order to make a bookings with restaurants, hotels, B&Bs, hostels, etc.
+        - Upon clicking the "Details" link, I am brought to a Google search results page in a new tab, which provides me with the relevant information and website links in order to make bookings with restaurants, hotels, B&Bs, hostels, etc.
     4. Contact the site owner with any questions:
-        - When first viewing the site, I can see link to the "Contact" page in the navigation links.
+        - When first viewing the site, I can see a link to the "Contact" page in the navigation links.
         - When I scroll to the bottom of the site's front page, I find another link to the site's "Contact" page, along with links to the site's social media profiles.
         - Upon visiting the site's "Contact" page, I am presented with information about how to get in touch with the site owner, by using the page's embedded contact form.
         - Upon filling in the contact form, I am presented with intuitive popovers if the information I have entered is in an incorrect format for the current form input type.
@@ -116,13 +112,13 @@ The [W3C Markup Validator](https://validator.w3.org/), [W3C CSS Validator](https
 
 - As a returning visitor, I want to;
     1. Search for new holiday destinations in Ireland:
-        - Upon re-entering the site, I can scroll immediatly to the search function, which allows me to search for a new location within Ireland.
+        - Upon re-entering the site, I can scroll immediately to the search function, which allows me to search for a new location within Ireland.
     2. Find restaurants & attractions near my current location, if I am already on holiday:
-        - Upon re-entering the site, I can re-enter my location in the searchbar, and search for only restaurants, or only attractions, by utilising the relevant search button underneath the searchbar.
+        - Upon re-entering the site, I can re-enter my location in the search bar, and search for only restaurants, or only attractions, by utilising the relevant search button underneath the search bar.
 
 ### Further Testing
 
-The website's functionality was tested across multiple browsers and device types. This ensured that it is responsive across a wide range of device sizes, and that the code used is supported by a wide range of browsers.
+The website's functionality was tested across multiple browsers and device types. This ensures that it is responsive across a wide range of device sizes, and that the code used is supported by a wide range of browsers.
 
 - Browsers tested:
     - Chrome (Windows, macOS, iOS, Android)
@@ -138,7 +134,7 @@ The website's functionality was tested across multiple browsers and device types
     - Laptop
     - Tablet
 
-- All links, button, and features worked as expected on all of the above listed browsers and device types.
+- All links, buttons, and features worked as expected on all of the above listed browsers and device types.
 - The website was found to be fully responsive on all device sizes ranging from 275px X 400px to 1920px X 1080px.
 - The website and it's documentation were reviewed by family and friends, to double check for grammatical errors & missed bugs, and to test the user experience.
 
@@ -146,7 +142,7 @@ The website's functionality was tested across multiple browsers and device types
 
 - Location search feature does not allow users to search for locations in Northern Ireland:
     - The Google Map bounds are set to include Northern Ireland, and it was intended that the search feature would extend to Northern Ireland locations. However, due to Google's geocoder restrictions being limited to using country ISO codes, it is not possible to include Northern Ireland in the geocoder restrictions, as it falls under the GB ISO code.
-    - Including GB in the geocoder restrictions would result in the allowed search locations to be extended to include all of the United Kingdon, including mainland UK. This would mean that a user would be able to search for a mainland UK location, without receiving an error message, but the map would simply render an all blue map (screenshot below), since the location would be outside of the map bounds.
+    - Including GB in the geocoder restrictions would result in the allowed search locations to be extended to include all of the United Kingdom, including mainland UK. This would mean that a user would be able to search for a mainland UK location, without receiving an error message, but the map would simply render an all blue map (screenshot below), since the location would be outside of the map bounds.
     - With this in mind, I found that it would be a better user experience to ultimately not include Northern Ireland in the allowable search locations, to avoid confusion on the user's end.
 
 ### Bugs Found & Fixed
