@@ -152,7 +152,7 @@ The website's functionality was tested across multiple browsers and device types
 ### Bugs Found & Fixed
 
 - When the dark mode theme was applied to the page before a search took place, when the search was initiated the list of results had it's light mode theme applied, instead of it's dark mode theme.
-    - This was fixed by adding an if statement to the maps.js file. This statement checks if dark mode is already enabled before a search is initiated, if so then it sets the results list style to it's dark mode theme:<br>
+    - This was fixed by adding an if statement to the maps.js file. This statement checks if dark mode is already enabled before a search is initiated, if so then it sets the results list style to it's dark mode theme:
     ```javascript
     let darkModeStatus = body.classList.contains('body-dark-mode');
     if (darkModeStatus) {
@@ -161,6 +161,23 @@ The website's functionality was tested across multiple browsers and device types
         placeLinkUrl.classList.toggle('link-dark-mode');
     }
     ```
+
+- When dark mode was enabled on one page of the site, navigating to another site page, or reloading the original page, would result in the default light mode theme being applied to the page. This meant that a user would need to enable dark mode individually for each page separately, and they would need to re-enable dark mode after reloading a page.
+    - This was fixed by adding a value to the Window `sessionStorage` property if dark mode was enabled, and removing that `sessionStorage` value if dark mode was disabled.
+    - Then, an if statement was added to simulate a click event on the dark mode switch if the dark mode value was present in `sessionStorage`:
+    ```javascript
+    let darkModeStatus = body.classList.contains('body-dark-mode');
+    let darkModeSwitch = document.getElementById("dark-mode-slider");
+    if (darkModeStatus) {
+        sessionStorage.setItem('darkModeActive', 'true'); //saves a value to session storage when dark mode is enabled
+    } else {
+        sessionStorage.removeItem('darkModeActive'); //removes the saved value from session storage when dark mode is disabled
+    }
+    if (sessionStorage.getItem('darkModeActive') === "true") {
+        darkModeSwitch.click();
+    }
+    ```
+
 
 ## Deployment
 
