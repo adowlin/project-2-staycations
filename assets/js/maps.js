@@ -122,12 +122,21 @@ function initialize() {
         let darkModeStatus = body.classList.contains('body-dark-mode');
         if (darkModeStatus) {
             map.setMapTypeId('styled_map');
+            sessionStorage.setItem('darkModeActive', 'true'); //saves a value to session storage when dark mode is enabled
         } else {
             map.setMapTypeId('roadmap');
+            sessionStorage.removeItem('darkModeActive'); //removes the saved value from session storage when dark mode is disabled
         }
     }
     let darkModeSwitch = document.getElementById("dark-mode-slider");
     darkModeSwitch.addEventListener("click", darkMode);
+
+    //check if there is already a saved value for dark mode in the session storage (from dark mode being enabled on another page on the site).
+    //if there is, simulate a click on the dark mode switch, to automatically enable dark mode on this page too.
+    //code to simulate a click event found in example here: https://stackoverflow.com/questions/2381572/how-can-i-trigger-a-javascript-event-click
+    if (sessionStorage.getItem('darkModeActive') === "true") {
+        darkModeSwitch.click();
+    }
 }
 
 // get the type of search results by user by determining which search button was clicked. on clicking a button, display the map results section & clear any existing result list items
