@@ -144,6 +144,10 @@ The website's functionality was tested across multiple browsers and device types
 
 ### Known Bugs
 
+- Location search feature does not allow users to search for locations in Northern Ireland:
+    - The Google Map bounds are set to include Northern Ireland, and it was intended that the search feature would extend to Northern Ireland locations. However, due to Google's geocoder restrictions being limited to using country ISO codes, it is not possible to include Northern Ireland in the geocoder restrictions, as it falls under the GB ISO code.
+    - Including GB in the geocoder restrictions would result in the allowed search locations to be extended to include all of the United Kingdon, including mainland UK. This would mean that a user would be able to search for a mainland UK location, without receiving an error message, but the map would simply render an all blue map (screenshot below), since the location would be outside of the map bounds.
+    - With this in mind, I found that it would be a better user experience to ultimately not include Northern Ireland in the allowable search locations, to avoid confusion on the user's end.
 
 ### Bugs Found & Fixed
 
