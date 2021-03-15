@@ -187,6 +187,11 @@ The website's functionality was tested across multiple browsers and device types
 
 The project used the [Gitpod](https://www.gitpod.io/) environment during development, and used Git to commit and push to GitHub, using the terminal feature within GitPod.
 
+When I first set up the project, I used the `git init` command in Gitpod to set up the workspace, and throughout the course of the site's development, I used the below Git commands to save & commit my work often:
+- `git add` to stage changes.
+- `git commit -m "[message]"` to commit staged files.
+- `git push` to push commits to the project's GitHub repo.
+
 ### GitHub Pages
 
 The project was deployed to GitHub Pages following the below steps:
