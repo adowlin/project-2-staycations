@@ -180,7 +180,7 @@ The website's functionality was tested across multiple browsers and device types
     }
     ```
 
-- When a search is initiated, the search results are displayed on the map with icons representing the type of place (i.e. restauant, accomodation, attraction). However, if a new search in the same location is initiated for a different type of result (e.g.: first searching for restaurants in Cork, then searching for accomodation in Cork), the icons from the previous search type remained on the map (icons for restaurants are displayed along with icons for accomodations).
+- When a search is initiated, the search results are displayed on the map with icons representing the type of place (i.e. restaurant, accomodation, attraction). However, if a new search in the same location is initiated for a different type of result (e.g.: first searching for restaurants in Cork, then searching for accomodation in Cork), the icons from the previous search type remained on the map (icons for restaurants are displayed along with icons for accomodations).
     - This was fixed by simply calling the `initialize();` function each time a search button is clicked, which results in the map re-loading, and the old search result markers no longer appear.
 
 ## Deployment
