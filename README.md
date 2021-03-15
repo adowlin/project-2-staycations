@@ -145,6 +145,12 @@ The website's functionality was tested across multiple browsers and device types
     - Including GB in the geocoder restrictions would result in the allowed search locations to be extended to include all of the United Kingdom, including mainland UK. This would mean that a user would be able to search for a mainland UK location, without receiving an error message, but the map would simply render an all blue map (screenshot below), since the location would be outside of the map bounds.
     - With this in mind, I found that it would be a better user experience to ultimately not include Northern Ireland in the allowable search locations, to avoid confusion on the user's end.
 
+- Location search feature allows searches for some generic locations:
+    - The search feature handles incorrect user input when a user tries to input text that is not a location in Ireland. However, some generic inputs that are not towns, villages, cities, specific locations in Ireland, are searchable.
+    - For example, if a user inputs the word "chinese" and initiates a search, the search will return a list chinese restaurants that are near a (seemingly) random location. Similarly, searching for "hotel" will return a list of hotels near a random location.
+    - It is only possible to restrict a search by `type` using Google's Places Autocomplete Service - which has not been used in this project.
+    - To help mitigate confusion caused by this bug, both the site's lead text, and the search bar's placeholder text were updated to more clearly describe to users that a specific city, town, village, etc, should be input into the search bar.
+
 ### Bugs Found & Fixed
 
 - When the dark mode theme was applied to the page before a search took place, when the search was initiated the list of results had it's light mode theme applied, instead of it's dark mode theme.
