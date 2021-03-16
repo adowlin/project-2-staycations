@@ -151,6 +151,15 @@ The website's functionality was tested across multiple browsers and device types
     - It is only possible to restrict a search by `type` using Google's Places Autocomplete Service - which has not been used in this project.
     - To help mitigate confusion caused by this bug, both the site's lead text, and the search bar's placeholder text were updated to more clearly describe to users that a specific city, town, village, etc, should be input into the search bar.
 
+- When passing the JavaScript code from the maps.js file through [JSHint](https://jshint.com/), one warning appears: "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (map)". This warning is referencing the below code, from line 253 of the script:
+```javascript
+li.addEventListener("click", () => {
+    map.setCenter(place.geometry.location);
+});
+```
+    - However, this code is adapted directly from the [Google Maps API documentation](https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-javascript), and is essential to the functionality of the feature that displays a location on the map when it's list result is clicked.
+    - Because it was not possible to find a working alternative, despite the possibility of confusing semantics, I felt it was reasonable to keep this section of code in the script.
+
 ### Bugs Found & Fixed
 
 - When the dark mode theme was applied to the page before a search took place, when the search was initiated the list of results had it's light mode theme applied, instead of it's dark mode theme.
