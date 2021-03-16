@@ -260,3 +260,6 @@ To run this project using a local IDE, for example VSCode, follow these steps to
     https://unsplash.com/photos/nNtFxF6ny5c <br>
 
 ### Acknowledgements
+
+- My family and friends for their help with testing the site's UX, and for their help with testing the site's functionality accross various devices.
+- My mentor for their helpful guidance and support throughout the project's planning and development stages.
