@@ -234,7 +234,7 @@ function addPlaces(places, map) {
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25),
             };
-            new google.maps.Marker({
+            const marker = new google.maps.Marker({
                 map,
                 icon: image,
                 title: place.name,
