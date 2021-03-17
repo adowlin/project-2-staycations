@@ -151,15 +151,29 @@ The website's functionality was tested across multiple browsers and device types
     - It is only possible to restrict a search by `type` using Google's Places Autocomplete Service - which has not been used in this project.
     - To help mitigate confusion caused by this bug, both the site's lead text, and the search bar's placeholder text were updated to more clearly describe to users that a specific city, town, village, etc, should be input into the search bar.
 
-- When passing the JavaScript code from the maps.js file through [JSHint](https://jshint.com/), one warning appears: "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (map)". This warning is referencing the below code, from line 253 of the script:
+- When passing the JavaScript code from the maps.js file through [JSHint](https://jshint.com/), two warnings appear:
+1. "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (map)". This warning is referencing the below code, from line 253 of maps.js:
     ```javascript
     li.addEventListener("click", () => {
         map.setCenter(place.geometry.location);
     });
     ```
-
     - However, this code is adapted directly from the [Google Maps API documentation](https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-javascript), and is essential to the functionality of the feature that displays a location on the map when it's list result is clicked.
     - Because it was not possible to find a working alternative, despite the possibility of confusing semantics, I felt it was reasonable to keep this section of code in the script.
+2. "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (placeLinkUrl)". This warning is referencing the below code, from line 265 of maps.js:
+    ```javascript
+    let darkModeListFunction = function(event) {
+        li.classList.toggle('body-dark-mode');
+        placeLinkUrl.classList.toggle('link-light-mode');
+        placeLinkUrl.classList.toggle('link-dark-mode');
+    };
+    ```
+    - However, for similar reasons to those outlined above - the code is essential to the functionality that applies the dark mode theme to URLs within the search results list, and it was not possible to find a working alternative - I feel that the code is justified.
+
+- When a search is initiated, the search results are displayed on the map with icons representing the type of place (i.e. restaurant, accomodation, attraction). However, if a new search in the same location is initiated for a different type of result (e.g.: first searching for restaurants in Cork, then searching for accomodation in Cork), the icons from the previous search type remain on the map (icons for restaurants are displayed along with icons for accomodations).
+    - This was initally fixed by simply calling the `initialize();` function each time a search button is clicked. This resulted in the map re-loading, and the old search result markers no longer appear.
+    - However, this also caused the page to seemingly reload, which caused buggy behaviour with the dark mode slider. If dark mode was already enabled when a serch was performed, the page would reload - the dark mode theme would remain applied to the page, but the dark mode slider itself would display "unchecked", as if dark mode was disabled.
+    - While neither of the above bugs are ideal to have present, I felt that having buggy behaviour on the dark mode slider would be distictly more noticable, and would result in a much worse user experience. With this in mode, I reverted to the previous map behaviour.
 
 ### Bugs Found & Fixed
 
@@ -189,9 +203,6 @@ The website's functionality was tested across multiple browsers and device types
         darkModeSwitch.click();
     }
     ```
-
-- When a search is initiated, the search results are displayed on the map with icons representing the type of place (i.e. restaurant, accomodation, attraction). However, if a new search in the same location is initiated for a different type of result (e.g.: first searching for restaurants in Cork, then searching for accomodation in Cork), the icons from the previous search type remained on the map (icons for restaurants are displayed along with icons for accomodations).
-    - This was fixed by simply calling the `initialize();` function each time a search button is clicked, which results in the map re-loading, and the old search result markers no longer appear.
 
 ## Deployment
 
