@@ -225,13 +225,6 @@ function codeLocation() {
 function addPlaces(places, map) {
     const placesList = document.getElementById("places");
 
-    // darkmode function that affects results list
-    function darkMode2(event) {
-        li.classList.toggle('body-dark-mode');
-        placeLinkUrl.classList.toggle('link-light-mode');
-        placeLinkUrl.classList.toggle('link-dark-mode');
-    }
-
     for (const place of places) {
         if (place.geometry && place.geometry.location) {
             const image = {
@@ -271,6 +264,13 @@ function addPlaces(places, map) {
             let body = document.body;
             let darkModeStatus = body.classList.contains('body-dark-mode');
             
+            // darkmode function that affects results list
+            function darkMode2(event) {
+                li.classList.toggle('body-dark-mode');
+                placeLinkUrl.classList.toggle('link-light-mode');
+                placeLinkUrl.classList.toggle('link-dark-mode');
+            }
+
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
             darkModeSwitch1.addEventListener('click', darkMode2);
             // if statement to check if dark mode is already enabled before a search is initiated, if so then set the results list style to dark theme
