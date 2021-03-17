@@ -262,14 +262,16 @@ function addPlaces(places, map) {
             let darkModeStatus = body.classList.contains('body-dark-mode');
             
             // darkmode function that affects results list
-            function darkMode2(event) {
+            //uses function assignment instead of function declaration to avoid placing function declaration in block
+            //outlined in fix here: https://stackoverflow.com/questions/14427077/function-declarations-should-not-be-placed-in-blocks-use-a-function-expression
+            let darkModeListFunction = function(event) {
                 li.classList.toggle('body-dark-mode');
                 placeLinkUrl.classList.toggle('link-light-mode');
                 placeLinkUrl.classList.toggle('link-dark-mode');
-            }
+            };
 
             let darkModeSwitch1 = document.getElementById('dark-mode-slider');
-            darkModeSwitch1.addEventListener('click', darkMode2);
+            darkModeSwitch1.addEventListener('click', darkModeListFunction);
             // if statement to check if dark mode is already enabled before a search is initiated, if so then set the results list style to dark theme
             if (darkModeStatus) {
                 li.classList.toggle('body-dark-mode');
