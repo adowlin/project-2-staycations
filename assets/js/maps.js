@@ -160,19 +160,16 @@ foodSearchButton.addEventListener('click', function() {
     searchType = 'restaurant';
     resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
-    initialize(); //reloads the map to remove markers added by any previous searches
 });
 staysSearchButton.addEventListener('click', function() {
     searchType = 'lodging';
     resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
-    initialize(); //reloads the map to remove markers added by any previous searches
 });
 sightsSearchButton.addEventListener('click', function() {
     searchType = 'tourist_attraction';
     resultsWrapper.style.display = 'block';
     searchResultsList.innerHTML = '';
-    initialize(); //reloads the map to remove markers added by any previous searches
 });
 
 // geocode location input from search bar - code adapted from Google Developer docs: https://developers.google.com/maps/documentation/javascript/geocoding
